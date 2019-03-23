@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Effects in jQuery-Animate Effect video 42</title>
+   <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <h2>Events in jQuery </h2>
+   <p>This is a paragraph outside Div</p>
+   <button id="btn1">Click Me 1</button>
+   <button id="btn2">Click Me 2</button>
+   <button id="btn3">Animate</button>
+   <div id="firstdiv" class="mydivs">
+      <p>This is first paragraph in first division</p>
+      <p>This is second paragraph in first division</p>
+   </div>
+   <div id="seconddiv" class="mydivs">
+      <p>This is third paragraph in second division</p>
+   </div>
+   <div id="thirddiv" class="mydivs">
+      <ul>
+         <li>List item 1</li>
+         <li>List item 2</li>
+         <li>List item 3</li>
+         <li>List item 4</li>
+      </ul>
+   </div>
+   <div id="cube" class="mycube">
+      <p>CUBE</p>
+   </div>
+
+
+</body>
+<script src="../js/jquery.js"></script>
+<script>
+   $(document).ready(function(){
+      //
+      $("#btn3").click(function(){
+         $("#cube").animate({
+            left:'150px',
+            opacity:'1',
+            width:'100px',
+            height:'100px'
+         },3000)//we can write "slow","fast"
+      });
+      //alert();
+   });
+</script>
+</html>
+
+
+<!-- The animate() method performs a custom animation of a set of CSS properties.
+This method changes an element from one state to another with CSS styles. The CSS property value is changed gradually, to create an animated effect.
+Only numeric values can be animated (like "margin:30px"). String values cannot be animated (like "background-color:red"), except for the strings "show", "hide" and "toggle". These values allow hiding and showing the animated element. -->

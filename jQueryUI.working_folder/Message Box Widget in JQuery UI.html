@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Message Box Widget in JQuery UI Video 53 </title>
+   <link rel="stylesheet" href="../jQueryUI.working_folder/style.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.structure.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.theme.css">
+</head>
+<body>
+  <h2>Message Box Widget in JQuery UI</h2>
+  <div id="firstdiv" class="mydivs">
+     <h3>Hello to Alamgir Learning</h3>
+     <br>
+     <button id="btn1">Click to show message box</button>
+  </div> <div class="row">
+     <br>
+  </div>
+  <div id="messagebox" class="mydivs" title="Messagebox">
+     <h3>This is just a dummy title</h3>
+     <img src="../img/alamgirlogo1.png" width="200px">
+     <br><br>
+     
+  </div>
+</body>
+
+<script src="../js/jquery.js"></script>
+<script src="../jqueryUI/jquery-ui.js"></script>
+<script>
+   /*  
+   $("#messagebox").dialog();//to create a moveable without click  dialog box
+   $("#btn1").click(function(){
+      //alert("Button Clicked")
+   });
+*/
+/*  
+   //with clickbox
+   $("#btn1").click(function(){
+      //alert("Button Clicked")
+      $("#messagebox").dialog();//to create a clickable moveable dialog box
+   });
+   */
+   $("#btn1").click(function(){
+      $("#messagebox").dialog({
+         title:"Custom Message Box",//to rename the dialog box
+         //draggable: false,//to fix the dialogbox
+         draggable: true,//to make moveable the dialogbox.
+         //resizable: false,// to make the dialog box fixed size
+         resizable: true,// to make the dialog box short or large
+         // to give custom size
+         height: 300,
+         width: 300,
+         modal:true,// without closing the diaglog box u cant access the website 
+         // to create a button 
+         buttons:[
+         {
+            text:"close",
+            icon: "ui-icon-heart",
+            click:function(){
+               $(this).dialog("close");
+            }
+          },
+          {
+             text:"ok",
+             icon: "ui-icon-heart",
+             click:function(){
+                alert("hello");
+                //$(this).dialog("close");
+             }
+          }
+         ]
+      });
+   });
+
+</script>
+</html>
+
+<!-- A dialog is a floating window that contains a title bar and a content area. The dialog window can be moved, resized and closed with the 'x' icon by default.
+If the content length exceeds the maximum height, a scrollbar will automatically appear.
+A bottom button bar and semi-transparent modal overlay layer are common options that can be added.
+More Info on dialog or MessageBox in jQuery UI - http://api.jqueryui.com/dialog/
+jQuery UI icons - https://api.jqueryui.com/theming/icons/ -->

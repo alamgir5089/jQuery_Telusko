@@ -1,0 +1,49 @@
+/* for selectors 
+#firstH2{
+   color: blue;
+}
+1*/
+/*  for selectors 2,jquery effects,jQuery Animate effect 
+.mydivs{
+   border:2px solid blue;
+   margin: 5px;
+   padding: 10px;
+}
+div p{
+   color: black;
+}
+
+.mycube{
+   width: 50px;
+   height: 50px;
+   background-color: blueviolet;
+   opacity: 0.4;
+   position: absolute;
+   padding: 20px;
+}
+*/
+/* Callback & Chaining Effects,DOM Manipulations
+.mydivs{
+   border:2px solid blue;
+   margin: 5px;
+   padding: 10px;
+}
+div p{
+   color: darkcyan;
+}
+ */
+
+/* DOM Manipulations Part 4 */
+.mydivs{
+   border:2px solid blue;
+   margin: 5px;
+   padding: 10px;
+}
+.newdivclass{
+   border-radius: 10px;
+   background-color: aqua;
+}
+.newparaclass{
+   font-weight: bold;
+   color: brown;
+}

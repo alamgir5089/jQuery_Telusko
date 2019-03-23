@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Autocomplete Widget in JQuery UI 54 </title>
+   <link rel="stylesheet" href="../jQueryUI.working_folder/style.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.structure.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.theme.css">
+</head>
+<body>
+  <h2>Autocomplete Widget in JQuery UI</h2>
+  <div id="mydivs">
+    <label><b>Enter your Favourite city</b></label>
+    <input type="text" name="" id="citytextbox">
+  </div>
+</body>
+
+<script src="../js/jquery.js"></script>
+<script src="../jqueryUI/jquery-ui.js"></script>
+<script>
+  /*  
+  let mycities = ["Dhaka","Sonargaon","Bogra","Dhaka","Mymensingh","Khulna"," Paharpur","Dinajpur","Thakurgaon","Rajshahi","Naoagoan","pirganj","Bochaganj"];//Arrays
+  
+  $("#citytextbox").autocomplete({
+    source: mycities
+  },{
+    autoFocus: true,//the searched city will selected if false then not selected
+    delay:1000,//during search the options come after 1 sec
+    minLength:2 // No of letter u need to type to search a city
+  });
+  */
+// u can do it also this way
+  $("#citytextbox").autocomplete(
+    {
+    source: ["Dhaka","Sonargaon","Bogra","Dhaka","Mymensingh","Khulna"," Paharpur","Dinajpur","Thakurgaon","Rajshahi","Naoagoan","pirganj","Bochaganj"]//Insted of let mycities u can put it here directly
+  },
+  {
+    autoFocus: true,//the searched city will selected if false then not selected
+    delay:1000,//during search the options come after 1 sec
+    minLength:2 // No of letter u need to type to search a city
+  });
+
+</script>
+</html>
+
+
+<!-- Autocomplete widget(if you use this you will get some suggetions like google search) Enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.
+When typing in the autocomplete field, the plugin starts searching for entries that match and displays a list of values to choose from. By entering more characters, the user can filter down the list to better matches.
+More Info on dialog or Autocomplete in jQuery UI - http://api.jqueryui.com/autocomplete/ -->

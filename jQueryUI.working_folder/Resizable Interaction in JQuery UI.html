@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Resizable Interaction in JQuery UI 58 </title>
+   <link rel="stylesheet" href="../jQueryUI.working_folder/style.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.structure.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.theme.css">
+</head>
+<body>
+  <h2>Resizable Interaction in JQuery UI</h2>
+  <div id="mydivs">
+     <img id="resize" src="../img/alamgirlogo1.png" width="200" height="50">
+  </div>
+</body>
+
+<script src="../js/jquery.js"></script>
+<script src="../jqueryUI/jquery-ui.js"></script>
+<script>
+   //$("#resize").resizable();//now after dragging the img u can make it big or shrink
+   $("#resize").resizable({
+      //maxWidth:500,
+      //maxHight:500,
+      autoHide: true,//the drag option will not visible without hover
+     // distance:200,//without 200 px it will not show any action
+      ghost:true,//whitout it the light image will not show with the deep one
+      aspectRatio:true,// image look good with proper shape
+      //aspectRatio:false,// image become destorted not looks good
+   });
+</script>
+</html>
+
+<!-- jQuery UI provides a set of mouse-based interactions as building blocks for rich interfaces and complex widgets. These interactions enhance the way we interact with the existing HTML DOM elements.
+The jQuery UI Resizable plugin makes selected elements resizable (meaning they have draggable resize handles). You can specify one or more handles as well as min and max width and height.
+API Documentation - http://api.jqueryui.com/resizable/ -->

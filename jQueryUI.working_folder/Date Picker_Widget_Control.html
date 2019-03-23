@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Date Picker widget control in jQuery UI Video </title>
+   <link rel="stylesheet" href="../jQueryUI.working_folder/style.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.structure.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.theme.css">
+</head>
+<body>
+   <div id="mydiv">
+         <h3>Introduction to jQueryUI</h3>
+         <input type="text" id="dateinput" placeholder="click to select date" >
+   </div>
+</body>
+
+<script src="../js/jquery.js"></script>
+<script src="../jqueryUI/jquery-ui.js"></script>
+<script>
+   //$("#mydiv").datepicker();// for a complete Calender
+   //$("#dateinput").datepicker();// for getting the calender on a click
+   // use some parameter to add something or customize the Calender 
+   $("#dateinput").datepicker({
+      numberOfMonths:1,// it show u how many calendr u want 
+      changeYear:true,//it ensure lots of years by a dropdown
+      changeMonth:true,//it ensure lots of months by a dropdown
+      showWeek:true,//it ensure weeks on the left of the calender
+      weekHeader:"WK No",//it ensure the week name on top
+      showOtherMonths:true,//it ensure previous dates of last month on top left
+      minDate: new Date(2017,0,1),//You can fix the minimun years date
+      maxDate: new Date(2020,0,5)// you cant fix the maximum years date
+   });
+   
+</script>
+</html>
+
+<!-- The jQuery UI Datepicker is a highly configurable plugin that adds datepicker functionality to your pages. You can customize the date format and language, restrict the selectable date ranges and add in buttons and other navigation options easily.
+By default, the datepicker calendar opens in a small overlay when the associated text field gains focus. For an inline calendar, simply attach the datepicker to a div or span.
+More Info on Date Picker in jQuery UI - http://api.jqueryui.com/datepicker/ -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Intoduction to jQuery UI</title>
+   <link rel="stylesheet" href="../jQueryUI.working_folder/style.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.structure.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.theme.css">
+</head>
+<body>
+   <h3>Introduction to jQueryUI</h3>
+</body>
+
+<script src="../js/jquery.js"></script>
+<script src="../jqueryUI/jquery-ui.js"></script>
+</html> -->

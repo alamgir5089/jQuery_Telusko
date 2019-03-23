@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Draggable Interaction in JQuery UI 56 </title>
+   <link rel="stylesheet" href="../jQueryUI.working_folder/style.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.structure.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.theme.css">
+</head>
+<body>
+  <h2>Draggable Interaction in JQuery UI</h2>
+  <div style="border: 1px solid black" >
+     <div class="cube">
+        <h3>CUBE 1</h3>
+     </div>
+     <div class="cube">
+        <h3>CUBE 2</h3>
+     </div>
+  </div>
+</body>
+
+<script src="../js/jquery.js"></script>
+<script src="../jqueryUI/jquery-ui.js"></script>
+<script>
+   //$(".cube").draggable();//now u can drag or move the cube entire the web page
+   //customize
+   $(".cube").draggable({
+      //axis: "y",//it will move top to buttom
+      //axis: "x", //it will move left to right
+      //containment: "parent",//the cubes is in between the padding and margin
+      //containment: "document",// u can move through out the whole page
+      cursor: "grabbing",
+      opacity: 0.5,
+      //grid:[300,300], //left righ top buttom the cube will move eachtime 300 px 
+      snap: true,//it will help to sticks closer or over of the cubes
+      snapTolerance: 100// snap means closer when the distance of them 100 then it will stick automtically.
+   });
+</script>
+
+</html>
+
+
+<!-- Query UI provides a set of mouse-based interactions as building blocks for rich interfaces and complex widgets. These interactions enhance the way we interact with the existing HTML DOM elements.
+Enable draggable functionality on any DOM element. Move the draggable object by clicking on it with the mouse and dragging it anywhere within the viewport.
+API Documentation - http://api.jqueryui.com/draggable/ -->

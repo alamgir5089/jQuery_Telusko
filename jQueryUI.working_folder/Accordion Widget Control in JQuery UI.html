@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Accordion in jQuery UI Video 52 </title>
+   <link rel="stylesheet" href="../jQueryUI.working_folder/style.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.structure.css">
+   <link rel="stylesheet" href="../jqueryUI/jquery-ui.theme.css">
+</head>
+<body>
+  <h2>Accodion Example</h2>
+   <div id="panels">
+      <h3>Alamgir Learning</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eveniet quam, adipisicing elit. Placeat eveniet quam,</p>
+
+      <h3>Moury Learning</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eveniet quam, adipisicing elit. Placeat eveniet quam,
+      it has been started 3 years back and i am the founcer of it .ffffdggsgfgfggggg
+      </p>
+
+      <h3>Moon Learning</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat </p>
+   </div>
+</body>
+
+<script src="../js/jquery.js"></script>
+<script src="../jqueryUI/jquery-ui.js"></script>
+<script>
+   //$("#panels").accordion();//Basic things
+   $("#panels").accordion({
+      collapsible:true,// to make the heading collapese or close.
+      //event:"mouseover",//to automatic open & clsoe
+      event:"click",
+      animate:300,
+      active:0,// if u want to open the 1st para as computer starts count from 0.
+      heightStyle:true,//it will make the content hight auto
+      icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+
+   });
+</script>
+</html>
+
+<!-- jQuery UI icons - https://api.jqueryui.com/theming/icons/ -->
+<!-- An accordion is a dropdown system which enclosed certain types of paragraph inside it when u click it expand  is used to show (and hide) HTML content.
+More Info on Accordion in jQuery UI - https://jqueryui.com/accordion/
+http://api.jqueryui.com/accordion/ -->

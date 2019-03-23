@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Theming Theme Roller Customizations in JQuery UI Video 59</title>
+   <link rel="stylesheet" href="../jQueryUI.working_folder/style.css">
+   <link rel="stylesheet" href="../jquery-ui-eggplant/jquery-ui.css">
+   <link rel="stylesheet" href="../jquery-ui-eggplant/jquery-ui.structure.css">
+   <link rel="stylesheet" href="../jquery-ui-eggplant/jquery-ui.theme.css">
+</head>
+<body>
+   <h2>Themes in jQueryUI</h2>
+    
+   <div id="dateinput" title="My Calender"></div>
+   <br><br>
+   <div id="messagebox">
+      <h3>This is jsut dummy title</h3>
+      <img src="../img/alamgirlogo1.png" width="200px"height="50px">
+   </div>
+   <br><br>
+   <div id="panels" style="width:80%">
+         <div>Alamgir Learning</div>
+         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eveniet quam, adipisicing elit. Placeat eveniet quam,</div>
+   
+         <h3>Moury Learning</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eveniet quam, adipisicing elit. Placeat eveniet quam,
+         it has been started 3 years back and i am the founcer of it .ffffdggsgfgfggggg
+         </p>
+   
+         <h3>Moon Learning</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat </p>
+   </div>
+</body>
+
+<script src="../js/jquery.js"></script>
+<script src="../jquery-ui-eggplant/jquery-ui.js"></script>
+<script>
+$(document).ready(function(){
+   $("#dateinput").datepicker({
+      numberOfMonths:1,
+      changeYear:true,
+      changeMonth:true,
+      showWeek:true,
+      weekHeader:"WK No",
+      showOtherMonths:true,
+      minDate: new Date(2017,0,1),
+      maxDate: new Date(2020,0,5)
+   });
+
+   $("#messagebox").dialog({
+         title:"Custom Message Box",
+         draggable: true,
+         resizable: true,
+         height: 300,
+         width: 300,
+         modal:false,
+   });
+
+   $("#panels").accordion({
+      collapsible:true,
+      event:"click",
+      animate:300,
+      active:0,
+      heightStyle:true,
+      icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+   });
+
+   $("#actionbtn").click(function(){
+
+   });
+
+});
+</script>
+</html>
+
+<!-- jQuery UI is primarily focused on the User Interface enhancements(hence the name jQuery UI ofcourse). Since its focussed on user interface enchancement, there is an option provided to style the inbuilt widgets in various ways to give it a particular look and feel.
+This can be achieved by the themeing option also known as Theme Roller.
+Check this link for more info - https://jqueryui.com/themeroller/ -->

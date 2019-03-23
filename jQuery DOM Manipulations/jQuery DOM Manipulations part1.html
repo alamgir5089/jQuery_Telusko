@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>jQuery DOM Manipulations video 44</title>
+   <link rel="stylesheet" href="../css/style.css">
+</head>
+<!-- text().html(),attr(),css() -->
+<body>
+   <h2>jQuery -DOM Manipulations </h2>
+   <button id="btn1">Action</button>
+   <div id="div1" class="mydivs">
+      <p id="p1" class="p1class" value="hello world">This is third <b> paragraph </b> in second division</p>
+   </div>
+</body>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+//getting the text method 
+   $("#btn1").click(function(){
+      /* using javascript 
+      let txt =$('#p1').text();
+      alert(txt);*/
+   //alert($('#p1').text());//or using jq
+   //setting a new word
+   //$('#p1').text("Hello world");
+   //$('#p1').html("This is first <b> paragraph </b> in <i>first</i> division");//html method
+   //alert($('#p1').attr("class"));//att method
+   //alert($('#p1').css("font-size"));//css method
+
+   });
+
+
+});
+</script>
+</html>
+
+
+
+<!-- jQuery contains powerful methods for changing and manipulating HTML elements and attributes.
+One very important part of jQuery is the possibility to manipulate the DOM.
+jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes.
+Three simple, but useful, jQuery methods for DOM manipulation are:
+text() - Sets or returns the text content of selected elements
+html() - Sets or returns the content of selected elements (including HTML markup)
+val() - Sets or returns the value of form fields
+attr() - method is used to get attribute values.
+ -->

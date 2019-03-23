@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>jQuery Selectors video 37</title>
+   <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <h2 class="myheading" id="firstH2">Selectors Up jQuery</h2>
+   <h2 class="myheading">Selectors Up jQuery</h2>
+   <h2>Selectors Up jQuery</h2>
+
+   <div class="myheading">
+      <p>This is a paragraph</p>
+   </div>
+   
+   <button onclick="fn1()" id="btn1">Click Me</button>
+
+</body>
+ <script src="../js/jquery.js"></script>
+<script>
+   function fn1()
+   {
+   //document.getElementById();
+   // $("h2").action();
+/* Example */
+// $("h2").fadeToggle();//it will select all the h2 tags
+//$("#firstH2").fadeToggle(); //it will select the id tag
+   $(".myheading").fadeToggle();//it will select all the class tags
+   }
+</script>
+</html> 
+
+<!-- jQuery selectors are one of the most important parts of the jQuery library.
+jQuery selectors allow you to select and manipulate HTML element(s).
+jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes, values of attributes and much more. It's based on the existing CSS Selectors, and in addition, it has some own custom selectors.
+All selectors in jQuery start with the dollar sign and parentheses: $().
+The purpose of jQuery is to make it much easier to use JavaScript on your website. jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code. jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+ -->
+
+<!--  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Switch Case In js</title>
+   <script type="text/javascript" >
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
+-->

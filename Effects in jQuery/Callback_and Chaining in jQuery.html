@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Effects in jQuery-part3 video 43</title>
+   <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <h2>Callback & Chaining Effects </h2>
+   <button id="btntoggle">Toggle</button>
+   <div id="firstdiv" class="mydivs">
+      <p>This is first paragraph in first division</p>
+      <p>This is second paragraph in first division</p>
+   </div>
+   <div id="seconddiv" class="mydivs">
+      <p>This is third paragraph in second division</p>
+   </div>
+</body>
+<script src="../js/jquery.js"></script>
+<script>
+   $(document).ready(function(){
+      //call back effect
+      /*  
+      $("#btntoggle").click(function(){
+         $("#firstdiv").fadeToggle(5000,function(){
+            alert("division is faded");
+         });//this 5000 means 5s time to toggle
+         //not only fade toggle u can use slideToggle or other effects
+         
+      });
+      */
+      /*  
+      // or 
+      function printMsg()
+      {
+         alert("effect done");
+      }
+      $("#btntoggle").click(function(){
+         $("#firstdiv").fadeToggle(5000,printMsg);
+      });
+      */
+      //chaining Effects
+      function printMsg()
+      {
+         alert("effect done");
+      }
+      $("#btntoggle").click(function(){
+         $("#firstdiv").slideUp(2000).slideDown(2000).fadeOut(1000).fadeIn(3000);
+      });
+
+   });
+</script>
+</html>
+
+<!-- Callback - 
+A callback function is executed after the current effect is 100% finished. JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.
+To prevent this, you can create a callback function.
+A callback function is executed after the current effect is finished.
+Typical syntax: $(selector).hide(speed,callback);
+ 
+Chaining - 
+With jQuery, you can chain together actions/methods.
+Chaining allows us to run multiple jQuery methods (on the same element) within a single statement.
+Until now we have been writing jQuery statements one at a time (one after the other).
+However, there is a technique called chaining, that allows us to run multiple jQuery commands, one after the other, on the same element(s).
+Tip: This way, browsers do not have to find the same element(s) more than once.
+To chain an action, you simply append the action to the previous action.
+Example - 
+$("#p1").css("color", "red").slideUp(2000).slideDown(2000); -->

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>jQuery DOM Manipulations-part4 video 47</title>
+   <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <h2>jQuery -DOM Manipulations part4</h2>
+   <button id="btn1">Add Class</button>
+   <button id="btn2">Remove Class</button>
+   <button id="btn3">Toggle Class</button>
+   <button id="btn4">CSS</button>
+   <br><br>
+   
+   <div id="div1" class="mydivs">
+      <p id="p1" class="p1class" value="hello world">This is first <b> paragraph </b> in <i>first</i> division</p>
+      <p id="p1" class="p1class" value="hello world">This is first <b> paragraph </b> in <i>first</i> division</p>
+   </div>
+  
+</body>
+<script src="../js/jquery.js"></script>
+<script>
+   $(document).ready(function(){
+      //newdivclass ensure background & border,newparaclass ensure bold & color
+      //add class
+      $("#btn1").click(function(){
+         $("#div1").addClass("newdivclass newparaclass");
+      });
+      //remove class
+      $("#btn2").click(function(){
+         $("#div1").removeClass("newdivclass newparaclass");
+      });
+      //toggle class(you can do both add & remove by using toggle)
+      $("#btn3").click(function(){
+         $("#div1").toggleClass("newdivclass newparaclass");
+      });
+      //css if you want to knw the font-size or  other
+      $("#btn4").click(function(){
+         //alert($("#div1").css("font-size"));
+         $("#div1").css("font-size","25px");//if you want to change font-size
+      });
+      
+   });
+</script>
+
+</html>
+
+
+<!-- jQuery contains powerful methods for changing and manipulating HTML elements and attributes.
+One very important part of jQuery is the possibility to manipulate the DOM.
+jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes.
+Three simple, but useful, jQuery methods for DOM manipulation are:
+addClass() - Adds one or more classes to the selected elements
+removeClass() - Removes one or more classes from the selected elements
+toggleClass() - Toggles between adding/removing classes from the selected elements
+css() - Sets or returns the style attribute -->

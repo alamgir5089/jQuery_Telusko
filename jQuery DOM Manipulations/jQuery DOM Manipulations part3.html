@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>jQuery DOM Manipulations-part3 video 46</title>
+   <link rel="stylesheet" href="../css/style.css">
+</head>
+<!-- text().html(),attr(),css() -->
+<body>
+   <h2>jQuery -DOM Manipulations part3</h2>
+   <button id="btn1">Append</button>
+   <button id="btn2">After</button>
+   <button id="btn3">Prepend</button>
+   <button id="btn4">Before</button>
+   <br><br>
+   <button id="btn5">Remove</button>
+   <button id="btn6">Empty</button>
+   
+   <div id="div1" class="mydivs">
+      <p id="p1" class="p1class" value="hello world">This is first <b> paragraph </b> in <i>first</i> division</p>
+   </div>
+</body>
+<script src="../js/jquery.js"></script>
+<script>
+   $(document).ready(function(){
+      //Append method
+      $("#btn1").click(function(){
+         $("#div1").append("<p>append=Inserts content at the end of the selected elements</p>");
+      });
+      //After Method
+      $("#btn2").click(function(){
+         $("#div1").after("<p>after=Inserts content after the selected elements </p>");
+      });
+      //Prepend method
+      $("#btn3").click(function(){
+         $("#div1").prepend("<p>prepend=Inserts content at the beginning of the selected elements </p>");
+      });
+      //Before method
+      $("#btn4").click(function(){
+         $("#div1").before("<p>before=Inserts content before the selected elements </p>");
+      });
+      //Remove Method
+      $("#btn5").click(function(){
+         $("#div1").remove();//it will remove the entire div with border
+      });
+      // Empty Method
+      $("#btn6").click(function(){
+         $("#div1").empty();//it will remove only the content not the border
+      });
+   });
+</script>
+</html>
+
+<!-- jQuery contains powerful methods for changing and manipulating HTML elements and attributes.
+One very important part of jQuery is the possibility to manipulate the DOM.
+jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes.
+Three simple, but useful, jQuery methods for DOM manipulation are:
+append() - Inserts content at the end of the selected elements
+prepend() - Inserts content at the beginning of the selected elements
+after() - Inserts content after the selected elements
+before() - Inserts content before the selected elements   
+remove() - Removes the selected element (and its child elements)
+empty() - Removes the child elements from the selected elements -->

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Effects in jQuery-part1 video 41</title>
+   <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <h2>Events in jQuery </h2>
+   <p>This is a paragraph outside Div</p>
+   <button id="btn1">Click Me 1</button>
+   <button id="btn2">Click Me 2</button>
+   <button id="btn3">Toggle</button>
+   <div id="firstdiv" class="mydivs">
+      <p>This is first paragraph in first division</p>
+      <p>This is second paragraph in first division</p>
+   </div>
+   <div id="seconddiv" class="mydivs">
+      <p>This is third paragraph in second division</p>
+   </div>
+   <div id="thirddiv" class="mydivs">
+      <ul>
+         <li>List item 1</li>
+         <li>List item 2</li>
+         <li>List item 3</li>
+         <li>List item 4</li>
+      </ul>
+   </div>
+   <div>
+      <ul>
+         <li>List item 1</li>
+         <li>List item 2</li>
+         <li>List item 3</li>
+         <li>List item 4</li>
+      </ul>
+   </div>
+   
+</body>
+<script src="../js/jquery.js"></script>
+ 
+<script>
+/*
+//hide,show & toggle
+  $(document).ready(function(){
+
+   $("#btn1").click(function(){
+      $("#firstdiv").hide();
+   });
+   $("#btn2").click(function(){
+      $("#firstdiv").show();
+   });
+   $("#btn3").click(function(){
+      $("#firstdiv").toggle();
+   });
+
+  });
+  */
+ /*  
+//fadeIn,fadeOut & fadeToggle
+$(document).ready(function(){
+
+$("#btn1").click(function(){
+   $("#firstdiv").fadeOut("slow");//u can use time here like "slow","fast",2000 means 2 s, u can apply for fadeIn and fadeToggle.
+});
+$("#btn2").click(function(){
+   $("#firstdiv").fadeIn();
+});
+$("#btn3").click(function(){
+   $("#firstdiv").fadeToggle();
+});
+
+});
+*/
+
+//slideUp,slideDown,slideToggle
+$(document).ready(function(){
+
+$("#btn1").click(function(){
+   $("#firstdiv").slideUp();
+});
+$("#btn2").click(function(){
+   $("#firstdiv").slideDown();
+});
+$("#btn3").click(function(){
+   $("#firstdiv").slideToggle();
+});
+
+});
+
+</script>
+
+</html>
+
+<!-- Effects in jQuery are implemented using inbuilt methods. In this tutorial we will understand - hide, show, toggle, fadeIn, fadeOut, fadeToggle, slideUp, slideDown, slideToggle effects. -->
+
+
+
+
+
